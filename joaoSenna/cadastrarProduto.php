@@ -14,7 +14,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     
-		<a class="navbar-brand" href="paginaInicial.php"><img src="img/skate.png" width="30" height="30" alt="ícone de skate">Kaos Skate</a>
+		<a class="navbar-brand" href="index.php"><img src="img/skate.png" width="30" height="30" alt="ícone de skate">Kaos Skate</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,7 +34,7 @@
 
 
 			    <li class="nav-item active ">
-			       <a class="nav-link" href="paginaInicial.php">Página Inicial<span class="sr-only">(current)</span></a>
+			       <a class="nav-link" href="index.php">Página Inicial<span class="sr-only">(current)</span></a>
 			    </li>
 			    
 			    

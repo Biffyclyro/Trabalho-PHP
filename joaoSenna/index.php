@@ -1,15 +1,13 @@
 
 
-
-
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html>
 <head>
+	<title>Produtos</title>
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="shortcut icon" type="image/x-icon" href="img/skate.png">
-	<title>Login</title>
+	<title>Pagina Inicial</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	
@@ -18,70 +16,70 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     
-		<a class="navbar-brand" href="paginaInicial.php"><img src="img/skate.png" width="30" height="30" alt="ícone de skate">Kaos Skate</a>
+		<a class="navbar-brand" href="index.php"><img src="img/skate.png" width="30" height="30" alt="ícone de skate">Kaos Skate</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
     </button>
-		  
+		  <?php 
+	
+				session_start();
+				if (isset($_SESSION['nome'])){
+					$nome = $_SESSION['nome'];
+				}else{
+					header("Location: login.php");
+				}
+			?>
 		   
 		
 		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 		    <ul class="navbar-nav ">
-			    
+
+
 			    <li class="nav-item active btn-info">
-			        <a class="nav-link" href="index.php">Login</a>
+			       <a class="nav-link" href="index.php">Página Inicial<span class="sr-only">(current)</span></a>
+			    </li>
+			    
+			    
+			    <li class="nav-item active ">
+			        <a class="nav-link" href="visualizarProdutos.php">Vizualizar Produtos</a>
 			    </li>
 			    <li class="nav-item active ">
-			        <a class="nav-link" href="cadastro.php">Cadastro Usuário</a>
+			        <a class="nav-link" href="cadastrarProduto.php">Cadastrar Produtos</a>
 			    </li>
-			    			    
-		        
+		        <li class="nav-item active user">
+			    	<a class="nav-link" href="controleUsuario.php?opcao=Sair">Logout</a>
+			    </li>
+			    
+
 			    
 		    </ul>
 		  </div>
 
 	</nav>
+	<div class="user">
+		<p>Bem Vindo <?php   echo $nome; ?></p>
+	</div>
 
-		<section>
 
-      <div class="container">
-        <form method="post" action="controleUsuario.php">
-          <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" name="nome" placeholder="Entre com o nome">
-            
-          </div>
-          <div class="form-group">
-            <label for="senha">Senha:</label>
-            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
-          </div>          
-          <button type="submit" class="btn btn-primary" name="opcao" value="Entrar">Entrar</button>
-        </form>
-      </div>
 
-			<article>
-				<h2></h2>
-				<p></p>
-			</article>
-
-			<article>
-				<h2></h2>
-				<p></p>
-			</article>
-
-			<article>
-				<h2></h2>
-				<p></p>
-			</article>
-		</section>
-
-		<footer></footer>
+	<br/>
+	<br/>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Kaos Skate</h1>
+				<a href="visualizarProdutos.php"><img src="img/manobra.jpg" class="img-fluid" alt="Uma manobra de skate, Ollie"></a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>	
+			
+		</div>
 		
 	</div>
-	<script></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/	DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 </html>

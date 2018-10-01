@@ -7,7 +7,7 @@
 			$nome=$_POST["nome"];
 			$senha=sha1($_POST["senha"]);
 			insere($nome, $senha);
-			header("Location: index.php");
+			header("Location: login.php");
 		}elseif($opcao == "Entrar"){
 			$nome=$_POST["nome"];
 			$senha= sha1($_POST["senha"]);
@@ -22,14 +22,14 @@
 				if($senha==$senhaBanco){
 					session_start();
 					$_SESSION['nome']=$nomeBanco;
-					header("Location: paginaInicial.php");
+					header("Location: index.php");
 				}else{
 					echo "<script>alert('Senha Incorreta!');</script>";
-					echo "<script>window.location = 'index.php';</script>";
+					echo "<script>window.location = 'login.php';</script>";
 				}
 			}else{
 				echo "<script>alert('Nome Incorreto!');</script>";
-				echo "<script>window.location = 'index.php';</script>";
+				echo "<script>window.location = 'login.php';</script>";
 			}
 		}
 	}elseif(isset($_GET["opcao"])){
@@ -37,7 +37,7 @@
 		if($opcao=='Sair'){
 			session_start();
 			session_destroy();
-			header("Location: index.php");
+			header("Location: login.php");
 		}	
 	}
 ?>

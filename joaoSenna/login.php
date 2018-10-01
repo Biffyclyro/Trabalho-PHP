@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,7 +9,7 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="shortcut icon" type="image/x-icon" href="img/skate.png">
-	<title>Cadastrar Usuário</title>
+	<title>Login</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	
@@ -14,7 +18,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     
-		<a class="navbar-brand" href="#"><img src="img/skate.png" width="30" height="30" alt="ícone de skate">Kaos Skate</a>
+		<a class="navbar-brand" href="index.php"><img src="img/skate.png" width="30" height="30" alt="ícone de skate">Kaos Skate</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,13 +28,14 @@
 		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 		    <ul class="navbar-nav ">
 			    
-			    <li class="nav-item active ">
+			    <li class="nav-item active btn-info">
 			        <a class="nav-link" href="login.php">Login</a>
 			    </li>
-			    <li class="nav-item active btn-info">
+			    <li class="nav-item active ">
 			        <a class="nav-link" href="cadastro.php">Cadastro Usuário</a>
 			    </li>
-          
+			    			    
+		        
 			    
 		    </ul>
 		  </div>
@@ -42,15 +47,15 @@
       <div class="container">
         <form method="post" action="controleUsuario.php">
           <div class="form-group">
-            <label for="nome">Cadastrar Usuário:</label>
+            <label for="nome">Nome:</label>
             <input type="text" class="form-control" id="nome" name="nome" placeholder="Entre com o nome">
             
           </div>
           <div class="form-group">
-            <label for="senha">Cadastrar Senha:</label>
+            <label for="senha">Senha:</label>
             <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
           </div>          
-          <button type="submit" class="btn btn-primary" name="opcao" value="Cadastrar">Entrar</button>
+          <button type="submit" class="btn btn-primary" name="opcao" value="Entrar">Entrar</button>
         </form>
       </div>
 
